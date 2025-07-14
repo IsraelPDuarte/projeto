@@ -25,9 +25,9 @@
 }
 
 body {
-  /*background*: color image no repeat position/size */
   background: var(--bg-url) no-repeat top center/cover;
-  height: 100vh;
+  background-attachment: fixed; /* faz o fundo se fixar e não repetir */
+  min-height: 100vh; /* Garante que cobre pelo menos a tela toda */
 }
 
 body * {
@@ -42,7 +42,7 @@ body * {
   padding: 0 24px;
 }
 
-/*switch*/
+/*switch */
 
 #switch {
   position: relative;
@@ -102,7 +102,7 @@ body * {
 }
 
 /*links - lista */
-ul {
+ ul {
   list-style: none;
 
   display: flex;
@@ -161,6 +161,106 @@ ul li a:hover {
   background: var(--hightligh-color);
 }
 
+/* container dos Certificados */
+
+.container_certificado {
+  margin: auto;
+  padding: 14px 24px;
+
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/* certificado */
+
+.certificado {
+
+  padding: 24px 24px;
+
+  background: var(--surface-color);
+  border-radius: 8px;
+
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+
+  text-decoration: none;
+  font-weight: 500;
+
+  transition: background 0.2s;
+}
+
+/* switch */
+
+.switch {
+  position: relative;
+  width: 64px;
+  margin: 10px 0;
+  cursor: pointer;
+}
+
+.switch button {
+  width: 32px;
+  height: 32px;
+  background: white var(--switch-bg-url) no-repeat center;
+  border: 0;
+  border-radius: 50%;
+
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 1;
+  transform: translatey(-50%) translateX(0);
+  animation: slide-back 0.3s ease;
+  transition: transform 0.3s ease;
+}
+
+.switch.active button {
+  transform: translateY(-50%) translateX(32px);
+}
+
+.switch button:hover {
+  outline: 8px solid var(--hightligh-color);
+}
+
+.switch span {
+  display: block;
+  width: 64px;
+  height: 24px;
+  background: var(--surface-color);
+  border: 1px solid var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  border-radius: 9999px;
+}
+
+.profile img {
+  width: 100%;
+  border-radius: 5px;
+}
+
+.certificado a {
+  
+  margin: 20px auto 0px;
+  align-items: center;
+  justify-content: center;
+  padding: 05px;
+  max-width: 400px;
+
+  transition: background 0.2s;
+  cursor: pointer;
+}
+
+
+
 footer {
   padding: 24px;
   text-align: center;
@@ -196,3 +296,4 @@ footer {
     left: 0;
   }
 }
+
