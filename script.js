@@ -41,3 +41,9 @@ const switch3 = document.getElementById("switch_3")
 switch3.addEventListener("click", () => {
   switch3.classList.toggle("active")
 })
+
+// alerta social-links 
+
+function exibirAlerta(tipo) {
+  alert(`Desculpe, ainda não tenho meu ${tipo} próprio!`)
+}
